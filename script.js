@@ -9,10 +9,18 @@ const workoutList = document.getElementById("workoutList");
 let workouts = JSON.parse(localStorage.getItem("workouts")) || [];
 function displayWorkouts() {
     workoutList.innerHTML = "";
-    workouts.forEach(function (workout) {
+    workouts.forEach(function (workout,index) {
         const newWorkout = document.createElement("li");
         newWorkout.textContent = workout.name + " - " + workout.duration + " minutes";
-        workoutList.appendChild(newWorkout);
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.addEventListener("click", function () {
+            workouts.splice (index, 1);
+            localStorage.setItem("workouts", JSON.stringify(workouts));
+            displayWorkouts();
+        });
+        newWorkout.appendChild(deleteButton);
+      workoutList.appendChild(newWorkout);
     });
 }
 displayWorkouts();
@@ -33,13 +41,7 @@ button.addEventListener("click", function () {
     localStorage.setItem("workouts", JSON.stringify(workouts));
     console.log (name);
     console.log (duration);
-    const newWorkout = document.createElement("li");
-    newWorkout.textContent = name + " - " + duration + " minutes";
-
-    workoutList.appendChild(newWorkout);
-
+    displayWorkouts();
     workoutNameInput.value = "";
-
     workoutDurationInput.value = "";
-
-});
+     });
