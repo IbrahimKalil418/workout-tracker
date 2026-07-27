@@ -11,7 +11,7 @@ function displayWorkouts() {
     workoutList.innerHTML = "";
     workouts.forEach(function (workout,index) {
         const newWorkout = document.createElement("li");
-        newWorkout.textContent = workout.name + " - " + workout.duration + " minutes";
+        newWorkout.textContent = workout.name + " - " + workout.duration + " minutes" + workout.date;
         const deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete";
         deleteButton.addEventListener("click", function () {
@@ -35,12 +35,11 @@ button.addEventListener("click", function () {
     }
     workouts.push({
         name: name,
-        duration: duration
+        duration: duration,
+        date: new Date().toLocaleDateString ()
     });
     console.log(workouts);
     localStorage.setItem("workouts", JSON.stringify(workouts));
-    console.log (name);
-    console.log (duration);
     displayWorkouts();
     workoutNameInput.value = "";
     workoutDurationInput.value = "";
