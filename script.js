@@ -14,6 +14,7 @@ function displayWorkouts() {
         newWorkout.textContent = workout.name + " - " + workout.duration + " minutes" + workout.date;
         const deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete";
+        deleteButton.className = "delete-button";
         deleteButton.addEventListener("click", function () {
             workouts.splice (index, 1);
             localStorage.setItem("workouts", JSON.stringify(workouts));
