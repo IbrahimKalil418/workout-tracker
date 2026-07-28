@@ -11,7 +11,7 @@ function displayWorkouts() {
     workoutList.innerHTML = "";
     workouts.forEach(function (workout,index) {
         const newWorkout = document.createElement("li");
-        newWorkout.textContent = workout.name + " - " + workout.duration + " minutes" + workout.date;
+        newWorkout.textContent = workout.name + " - " + workout.duration + " minutes - " + workout.date;
         const deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete";
         deleteButton.className = "delete-button";
