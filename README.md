@@ -1,37 +1,65 @@
 # Workout Tracker
 
-## Problem
+## Project Overview
 
-Many people struggle to stay consistent with their workouts because they don't have a simple way to record their progress.
+Workout Tracker is a simple web application that helps users keep track of their workouts by recording the workout name, duration, and date.
 
-## Solution
+## Problem Being Solved
 
-Workout Tracker allows users to quickly add workouts and track the duration of each workout session.
+Many people forget to keep track of their workouts. This app provides an easy way to record workouts and stay organized.
+
+## Value Provided
+
+The app helps users monitor their exercise habits and maintain consistency by saving workout records.
 
 ## Features
 
-- Add workout names
+- Add a workout
 
-- Track workout duration
+- Record workout duration
 
-- View recorded workouts
+- Automatically display the current date
+
+- Delete workouts
+
+- Save workouts using Local Storage
+
+- Clean and responsive user interface
 
 ## Technologies Used
+
 - HTML
 
 - CSS
 
 - JavaScript
 
-## How to Use
+- Local Storage
 
-1. Enter a workout name.
+## How to Run the Project
 
-2. Enter the workout duration in minutes.
+1. Clone the repository.
 
-3. Click "Add Workout" to save the workout.
+2. Open the project folder.
 
-## Live Website
+3. Open `index.html` in a web browser or use the Live Server extension in Visual Studio Code.
 
-https://IbrahimKalil418.github.io/workout-tracker/
+## AI Tools Used
 
+ChatGPT was used to:
+
+- Explain HTML, CSS, and JavaScript concepts.
+
+- Help debug coding errors.
+
+- Assist with implementing features such as Local Storage, date display, and delete functionality.
+
+- Explain how the code works step by step.
+
+## GitHub Repository
+
+https://github.com/IbrahimKalil418/workout-tracker
+
+## Live Demo
+
+https://ibrahimkalil418.github.io/workout-tracker/
