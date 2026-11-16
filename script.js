@@ -9,6 +9,7 @@ const workoutList = document.getElementById("workoutList");
 let workouts = JSON.parse(localStorage.getItem("workouts")) || [];
 function displayWorkouts() {
     workoutList.innerHTML = "";
+    updateDashboard();
     workouts.forEach(function (workout,index) {
         const newWorkout = document.createElement("li");
         newWorkout.textContent = workout.name + " - " + workout.duration + " minutes - " + workout.date;
