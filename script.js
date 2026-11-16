@@ -45,3 +45,26 @@ button.addEventListener("click", function () {
     workoutNameInput.value = "";
     workoutDurationInput.value = "";
      });
+
+
+function updateDashboard() {
+    const totalWorkouts = workouts.length;
+
+    const totalMinutes = workouts.reduce(function(total, workout) {
+        return total + Number(workout.duration);
+    }, 0);
+
+    const now = new Date();
+    const startOfWeek = new Date(now);
+    startOfWeek.setHours(0, 0, 0, 0);
+    startOfWeek.setDate(now.getDate() - now.getDay());
+
+    const weeklyWorkouts = workouts.filter(function(workout) {
+        const workoutDate = new Date(workout.date);
+        return workoutDate >= startOfWeek && workoutDate <= now;
+    }).length;
+
+    document.getElementById("totalWorkouts").textContent = totalWorkouts;
+    document.getElementById("totalMinutes").textContent = totalMinutes;
+    document.getElementById("weeklyWorkouts").textContent = weeklyWorkouts;
+}
