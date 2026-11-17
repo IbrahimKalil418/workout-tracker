@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,44 +7,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workout Tracker</title>
     <link rel="stylesheet" href="style.css">
-    </head>
+</head>
 <body>
     <div class="container">
-    <h1>Workout Tracker</h1>
-    <h2>My Dashboard</h2>
+        <h1>Workout Tracker</h1>
+        <h2>My Dashboard</h2>
 
-<div class="dashboard">
+        <div class="dashboard">
+            <div class="stat-card">
+                <h3>Total Workouts</h3>
+                <p id="totalWorkouts">0</p>
+            </div>
 
-    <div class="stat-card">
+            <div class="stat-card">
+                <h3>Total Minutes</h3>
+                <p id="totalMinutes">0</p>
+            </div>
 
-        <h3>Total Workouts</h3>
+            <div class="stat-card">
+                <h3>This Week</h3>
+                <p id="weeklyWorkouts">0</p>
+            </div>
+        </div>
 
-        <p id="totalWorkouts">0</p>
+        <input
+            type="text"
+            id="workoutName"
+            placeholder="Workout Name"
+        >
 
+        <select id="workoutCategory">
+            <option value="">Select Category</option>
+            <option value="Chest">Chest</option>
+            <option value="Back">Back</option>
+            <option value="Legs">Legs</option>
+            <option value="Arms">Arms</option>
+            <option value="Shoulders">Shoulders</option>
+            <option value="Abs">Abs</option>
+            <option value="Cardio">Cardio</option>
+            <option value="Full Body">Full Body</option>
+        </select>
+
+        <input
+            type="number"
+            id="workoutDuration"
+            placeholder="Duration (minutes)"
+        >
+
+        <button type="button" id="addWorkoutBtn">
+            Add Workout
+        </button>
+
+        <ul id="workoutList"></ul>
     </div>
 
-    <div class="stat-card">
-
-        <h3>Total Minutes</h3>
-
-        <p id="totalMinutes">0</p>
-
-    </div>
-
-    <div class="stat-card">
-
-        <h3>This Week</h3>
-
-        <p id="weeklyWorkouts">0</p>
-
-    </div>
-
-</div>
-    <input type="text" id="workoutName"placeholder="Workout Name">
-    <input type="number" id="workoutDuration" placeholder="Duration (minutes)">
-<button type="button" id="addWorkoutBtn">Add Workout</button>
-<ul id="workoutList"></ul>
-</div>
-<script src="script.js?v=2"></script>
+    <script src="script.js?v=2"></script>
 </body>
 </html>
+
